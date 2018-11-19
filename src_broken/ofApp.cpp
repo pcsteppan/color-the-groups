@@ -2,19 +2,26 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-
 	ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
-
-	for (int i = 0; i < GRID_SIZE; i++) {
-		group_indices[i] = i;
-	}
-
+	destroyArray = false;
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
 	group_count = 0;// int(ofRandom(100));
 
+	/*
+	if (destroyArray) {
+		for (int i = 0; i < GRID_SIZE; i++) {
+			for (int j = 0; j < GRID_SIZE; j++) {
+				delete groupPtrs[i][j];
+			}
+			delete[] groupPtrs[i];
+		}
+		delete[][] groupPtrs;
+	}
+	destroyArray = true;
+	*/
 
 	for (int i = 0; i < GRID_SIZE; i++) {
 		for (int j = 0; j < GRID_SIZE; j++) {

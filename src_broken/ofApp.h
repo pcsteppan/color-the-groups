@@ -23,10 +23,11 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
 		// You will notice more errors the larger the GRID_SIZE!
-		static const int GRID_SIZE = 16;
+		static const int GRID_SIZE = 32;
 		static const int TILE_SIZE = 256 / GRID_SIZE;
 		int group_count;
-		int group_indices[GRID_SIZE];
+
+		bool destroyArray;
 		bool img[GRID_SIZE][GRID_SIZE];
 		int** groupPtrs[GRID_SIZE][GRID_SIZE];
 };
